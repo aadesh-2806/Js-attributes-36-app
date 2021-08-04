@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Farms</title>
+</head>
+<body>
+    <h1>ALL Farm</h1>
+    <ul>
+        <% for(i in farms){ %>
+            <form action="/farms/<%= i._id %>">
+                <li><%= i.name %></li>
+                <button>Details</button>
+            </form>
+        <% } %>
+    </ul>
+    <br>
+    <a href="/farms/new">New farm</a><br>
+    
+</body>
+</html>
